@@ -1,0 +1,14 @@
+#! /usr/bin/perl
+use strict;
+my %family_name=(
+fred=>'flintstone',
+barne=>'rubble',
+wilma=>'flintstone',
+);
+print "Please enter the name:\n";
+while(<STDIN>)
+{
+    chomp($_);
+    print "$line\n";
+    print "$family_name{$_}";
+}

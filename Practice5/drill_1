@@ -1,0 +1,6 @@
+#! /usr/bin/perl
+print reverse <>;
+my $em = 34;
+print "$em\n";
+print "$em\\n";
+print "\$em\n";

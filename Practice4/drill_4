@@ -1,0 +1,18 @@
+#! /usr/bin/perl
+use strict;
+use 5.010;
+sub greet{
+    state $last_guest;
+    my $name = shift @_;
+    print "Hi,$name.";
+    if(!(defined $last_guest)){
+	print "You are the first one here!\n";
+    }
+    else{
+	print "$last_guest is also here!\n";
+    }
+    $last_guest = $name;
+}
+greet('Fred');
+greet('Jimmy');
+    

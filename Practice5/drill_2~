@@ -1,0 +1,5 @@
+#! /usr/bin/perl
+use strict;
+my @lines = <STDIN>;
+
+printf "123456789012345678901234567890". ("%20s" x @lines),@lines;

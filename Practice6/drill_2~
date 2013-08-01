@@ -1,0 +1,10 @@
+#! /usr/bin/perl
+use strict;
+my %words_count;
+while (chomp($_=<STDIN>))
+{
+    $words_count{$_}+=1;
+}
+foreach (sort keys %words_count){
+    printf "$_\t $words_count{$_}\n"
+}

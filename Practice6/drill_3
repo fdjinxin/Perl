@@ -1,0 +1,13 @@
+#! /usr/bin/perl
+use strict;
+my($maxLength);
+foreach (keys %ENV)
+{
+    my $length = length $_;
+    if($length > $maxLength){
+	$maxLength = $length;
+    }
+}
+foreach (keys %ENV){
+    printf "%-${maxLength}s\t%s\n",$_,$ENV{$_};
+}

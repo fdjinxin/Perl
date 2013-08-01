@@ -1,0 +1,12 @@
+#! /usr/bin/perl
+use strict;
+sub total{
+    my $sum;
+    foreach (@_){
+	$sum += $_;
+    }
+    $sum;
+}
+my @fred = (1..1000);
+my $fred_total = &total(@fred);
+print "The total of \@fred is $fred_total.\n";

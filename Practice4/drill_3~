@@ -1,0 +1,27 @@
+#! /usr/bin/perl
+sub average{
+    my $sum,my $count;
+    foreach (@_)
+    {
+	$count += 1;
+	$sum += $_;
+    }
+    $sum / $count;
+}
+sub above_average{
+    my @above_average,my $average;
+    $average = &average(@_);
+    print "@_,$average\n";
+    foreach (@_){
+	if($_ gt $average)
+	{	   
+	    push(@above_average,$_);
+	}
+    }
+    @above_average;
+}
+my @list = (1..10,11);
+my $average = &average(@list);
+my @above_average = &above_average(@list);
+print "Average of @list is $average.\n";
+print "The numbers above avergae is @above_average.\n";
