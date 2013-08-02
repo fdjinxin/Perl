@@ -1,0 +1,20 @@
+## Copyright (C) 2013 by Yours Truly.
+#! /usr/bin/perl
+my $in = $ARGV[0];
+if(! defined $in){
+    die "Usage: $0 filename";
+}
+my $out = $in;
+$out .=".out";
+my($in_fh,$out_fh);
+if(! open $in_fh,'<',$in){
+    die "Can't open $in";
+}
+if(! open $out_fh,'>',$out){
+    die "Can't open $out";
+}
+while (<$in_fhe>){
+    s/fred/Larry/gi;
+    print "$_";
+    print $out_fh $_;
+}

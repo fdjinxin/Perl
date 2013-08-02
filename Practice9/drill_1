@@ -1,0 +1,11 @@
+## Copyright (C) 2013 by Yours Truly.
+#! /usr/bin/perl
+$what = "fred";
+while (<>){
+    chomp;
+    if(/($what){3}/){
+	print "Matched:$`<$&>$'\n";
+    }else{
+	print "No match\n";
+    }
+}
