@@ -1,1 +1,13 @@
 #! /usr/bin/perl
+while (<>){
+    chomp;
+#    if(/(match)/){
+#    if(/a\b/){
+#    if(/(?<word>\w*a\b)(?<after>.{0,5})/){
+    if(/(match)/){
+	print "word contains '$+{word}',after contains '$+{after}'\n";
+	print "Matched: |$`<$&>$'|\n";
+    }else{
+	print "No match:|$_|\n";
+    }
+}
