@@ -1,0 +1,16 @@
+#! /usr/bin/perl
+my $number = int(1+rand(100));
+my $debug = defined $ENV{DEBUG} ? $ENV{DEBUG} : 1;
+print "The secret number is $number\n" if $debug;
+while(1){
+    chomp(my $input = <STDIN>);
+    if($input =~ /quit|exit|(\A\s*\z)/){
+	print "The secret number is $number\n";
+	last;
+    }elsif($input == $number){
+	print "You are right. The secret number is $input\n";
+	last;
+    }else{
+	($input > $number) ? print "Too large.\n" : print "Too small.\n";
+    }
+}
